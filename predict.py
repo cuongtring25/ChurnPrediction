@@ -12,7 +12,9 @@ from xgboost import XGBClassifier
    The new_data still has churn_label columns because i want to evaluate how accurate the model is
    but in real case, there might won't include that columns
 """
-df = pd.read_excel("new_data.xlsx")
+
+datasetname = "new_data.xlsx"
+df = pd.read_excel(datasetname)
 
 #this will handle all preprocessing step, returning the dataset cleaned
 def DataPreprocessing(dataframe,scaling=False):
